@@ -281,5 +281,8 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Pre-opt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+
 # inherit from the proprietary version
 -include vendor/xiaomi/jason/BoardConfigVendor.mk
