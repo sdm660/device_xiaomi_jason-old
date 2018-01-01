@@ -44,3 +44,5 @@
 # Camera LED brightness control
 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_[0-1]/max_brightness                 u:object_r:sysfs_leds:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power@1\.2-service\.jason-libperfmgr u:object_r:hal_power_default_exec:s0
