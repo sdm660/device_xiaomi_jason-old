@@ -85,3 +85,6 @@ persist.rmnet.data.enable           u:object_r:vendor_default_prop:s0
 remosaic.debug.dump                 u:object_r:vendor_default_prop:s0
 remosaic.debug.loglevel             u:object_r:vendor_default_prop:s0
 ro.build.software.version           u:object_r:vendor_default_prop:s0
+
+# Power
+vendor.powerhal.state u:object_r:power_prop:s0
