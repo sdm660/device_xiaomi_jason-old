@@ -24,14 +24,12 @@ public class Constants {
 
     // Preference keys
     public static final String BUTTON_SWAP_KEY = "button_swap";
-    public static final String FP_POCKETMODE_KEY = "fp_pocketmode";
 
     // Nodes
     public static final String BUTTON_SWAP_NODE = "/sys/bus/i2c/devices/4-0020/input/input1/reversed_keys";
 
     // Intents
     public static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";
-    public static final String CUST_INTENT_EXTRA = "pocketmode_service";
 
     // Holds <preference_key> -> <proc_node> mapping
     public static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
