@@ -6,3 +6,6 @@ r_dir_file(system_server, keylayout_file)
 # Allow KeyDisabler to work
 allow system_server sysfs_sectouch:dir search;
 allow system_server sysfs_sectouch:file rw_file_perms;
+# Allow KCal to work
+allow system_server kcal_dev:dir r_dir_perms;
+allow system_server kcal_dev:file rw_file_perms;

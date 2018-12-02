@@ -17,10 +17,32 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+        android:title="@string/buttons_title">
     <SwitchPreference
         android:key="button_swap"
         android:title="@string/button_swap_title"
         android:summary="@string/button_swap_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/vibrator_category">
+        <org.lineageos.settings.device.VibratorStrengthPreference
+            android:key="vibrator_key"
+            android:title="@string/vibrator_title"
+            android:iconSpaceReserved="true"
+            android:summary="@string/vibrator_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/graphics_title">
+     <PreferenceScreen
+            android:key="kcal"
+            android:fragment="org.lineageos.settings.device.DisplayCalibration"
+            android:iconSpaceReserved="true"
+            android:summary="@string/kcal_summary"
+            android:title="@string/kcal_title" />
+     </PreferenceCategory>
 
     <SwitchPreference
         android:key="fp_pocketmode"

@@ -41,7 +41,7 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
     private static SearchIndexableResource[] INDEXABLE_RES = new SearchIndexableResource[]{
             new SearchIndexableResource(1, R.xml.button_panel,
                     ButtonSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_additional_buttons),
+                    R.drawable.ic_settings_device_features),
     };
 
     @Override
