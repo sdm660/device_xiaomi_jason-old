@@ -46,4 +46,9 @@
     <string name="kcal_contrast">Contrast</string>
     <string name="menu_reset">Reset</string>
 
+    <!-- Notification LED -->
+    <string name="notification_category">Notification LED</string>
+    <string name="notification_title">Brightness</string>
+    <string name="notification_summary">Define the brightness of the LED</string>
+
 </resources>

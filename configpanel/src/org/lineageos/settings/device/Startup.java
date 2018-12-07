@@ -38,6 +38,7 @@ public class Startup extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(action) || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
+            NotificationBrightnessPreference.restore(context);
             VibratorStrengthPreference.restore(context);
             DisplayCalibration.restore(context);
 

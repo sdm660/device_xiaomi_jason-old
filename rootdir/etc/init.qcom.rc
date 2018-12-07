@@ -125,6 +125,10 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
+    # Notification LED control
+    chown root system /sys/class/leds/white/max_brightness
+    chmod 0660 /sys/class/leds/white/max_brightness
+
     # Vibrator permissions
     chown root system /sys/class/timed_output/vibrator/vtg_level
     chmod 0660 /sys/class/timed_output/vibrator/vtg_level

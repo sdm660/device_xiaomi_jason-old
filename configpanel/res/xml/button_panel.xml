@@ -32,6 +32,15 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+        android:title="@string/notification_category">
+        <org.lineageos.settings.device.NotificationBrightnessPreference
+            android:key="notification_key"
+            android:iconSpaceReserved="true"
+            android:title="@string/notification_title"
+            android:summary="@string/notification_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/vibrator_category">
         <org.lineageos.settings.device.VibratorStrengthPreference
             android:key="vibrator_key"
