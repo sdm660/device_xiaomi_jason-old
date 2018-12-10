@@ -63,11 +63,6 @@ public class Startup extends BroadcastReceiver {
                             " failed while restoring saved preference values");
                     }
                 }
-
-                // Send initial broadcasts
-                final boolean shouldEnablePocketMode =
-                        prefs.getBoolean(Constants.FP_POCKETMODE_KEY, true);
-                Utils.broadcastCustIntent(context, shouldEnablePocketMode);
             }
         }
     }
