@@ -25,12 +25,6 @@
         android:summary="@string/button_swap_summary" />
     </PreferenceCategory>
 
-    <SwitchPreference
-        android:key="fp_pocketmode"
-        android:title="@string/fingerprint_pocketmode_title"
-        android:summary="@string/fingerprint_pocketmode_summary"
-        android:defaultValue="false" />
-
     <PreferenceCategory
         android:title="@string/notification_category">
         <org.lineageos.settings.device.NotificationBrightnessPreference
