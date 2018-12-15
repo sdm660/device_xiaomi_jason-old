@@ -215,7 +215,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
+    MiuiCamera \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
@@ -232,6 +232,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.fovc.enable=1 \
     persist.dualcam.lpm.enable=1 \
     persist.dualcam.defer.enable=1
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/MiuiCamera/etc/jason.xml:system/etc/device_features/jason.xml \
+    $(LOCAL_PATH)/MiuiCamera/etc/miuicamera-permissions.xml:system/etc/default-permissions/miuicamera-permissions.xml
 
 # ConfigPanel
 PRODUCT_PACKAGES += \
