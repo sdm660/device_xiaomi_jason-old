@@ -182,3 +182,5 @@ on property:sys.boot_completed=1
 
     setprop net.hostname xiaomi-jason
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
