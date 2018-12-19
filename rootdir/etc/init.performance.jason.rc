@@ -128,3 +128,11 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/vfs_cache_pressure 60
 
     setprop net.hostname xiaomi-jason
+
+on property:dev.bootcomplete=1 && property:ro.runtime.firstboot=*
+    # Notification LED control default value
+    write /sys/class/leds/white/max_brightness 64
+
+    # Vibrator strength default value
+    write /sys/class/timed_output/vibrator/vtg_level 2697
+

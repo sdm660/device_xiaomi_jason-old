@@ -60,7 +60,7 @@ public class NotificationBrightnessPreference extends DialogPreference implement
     public boolean onDisplayPreferenceDialog(Preference preference) {
         if (preference instanceof NotificationBrightnessPreference) {
         	mOldBrightness = Integer.parseInt(getValue(getContext()));
-		mMinValue = 0;
+		mMinValue = 1;
         	mMaxValue = 64;
         	offset = mMaxValue/64f;
 
