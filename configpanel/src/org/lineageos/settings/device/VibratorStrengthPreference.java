@@ -49,12 +49,12 @@ public class VibratorStrengthPreference extends DialogPreference implements
     private int mOldStrength;
     private int mMinValue;
     private int mMaxValue;
+    private int minPercentage = 25;
     private float offset;
     private Vibrator mVibrator;
     private TextView mValueText;
 
     private static final String FILE_LEVEL = "/sys/class/timed_output/vibrator/vtg_level";
-    private static final String FILE_MIN = "/sys/class/timed_output/vibrator/vtg_min";
     private static final String FILE_MAX = "/sys/class/timed_output/vibrator/vtg_max";
     private static final long testVibrationPattern[] = {0,250};
 
@@ -66,8 +66,8 @@ public class VibratorStrengthPreference extends DialogPreference implements
     public boolean onDisplayPreferenceDialog(Preference preference) {
         if (preference instanceof VibratorStrengthPreference) {
         	mOldStrength = Integer.parseInt(getValue(getContext()));
-			mMinValue = Integer.parseInt(Utils.getFileValue(FILE_MIN, "0"));
         	mMaxValue = Integer.parseInt(Utils.getFileValue(FILE_MAX, "100"));
+		mMinValue = (mMaxValue/100)*minPercentage;
         	offset = mMaxValue/100f;
 
             View view = LayoutInflater.from(getContext()).inflate(R.layout.preference_dialog_vibrator_strength, null);            
