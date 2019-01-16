@@ -3,3 +3,8 @@ allow system_app sysfs_sectouch:dir search;
 allow system_app sysfs_sectouch:file rw_file_perms;
 allow system_app kcal_dev:file rw_file_perms;
 allow system_app kcal_dev:dir search;
+#Vibrator and LED
+allow system_app sysfs_leds:dir search;
+allow system_app sysfs_leds:file { getattr open read write };
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file write;
