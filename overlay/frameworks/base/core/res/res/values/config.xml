@@ -437,4 +437,6 @@
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
     <integer name="config_longPressOnHomeBehavior">3</integer>
 
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 </resources>
