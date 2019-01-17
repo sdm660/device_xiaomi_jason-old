@@ -61,6 +61,10 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 0
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down 1
+    chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
     # configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu4/online 1
@@ -79,6 +83,10 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 59000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down 1
+    chown system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chown system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
     # bring all cores online
     write /sys/devices/system/cpu/cpu0/online 1

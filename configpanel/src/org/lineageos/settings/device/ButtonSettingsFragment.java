@@ -20,6 +20,7 @@ package org.lineageos.settings.device;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
@@ -29,6 +30,7 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.util.Log;
 
 import org.lineageos.internal.util.FileUtils;
 import org.lineageos.internal.util.PackageManagerUtils;
@@ -41,12 +43,17 @@ public class ButtonSettingsFragment extends PreferenceFragment
     private TorchWhiteBrightnessPreference mWhiteBrightness;
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mKcalPref;
+    private ListPreference mGOVERNOR;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.button_panel);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        mGOVERNOR = (ListPreference) findPreference(Constants.GOVERNOR_KEY);
+        mGOVERNOR.setValue(FileUtils.getStringProp(Constants.GOVERNOR_SYSTEM_PROPERTY, "0"));
+        mGOVERNOR.setOnPreferenceChangeListener(this);
 
         mNotificationBrightness = (NotificationBrightnessPreference) findPreference("notification_key");
         if (mNotificationBrightness != null) {
@@ -88,6 +95,7 @@ public class ButtonSettingsFragment extends PreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String node = Constants.sBooleanNodePreferenceMap.get(preference.getKey());
+        final String key = preference.getKey();
         if (!TextUtils.isEmpty(node) && FileUtils.isFileWritable(node)) {
             Boolean value = (Boolean) newValue;
             FileUtils.writeLine(node, value ? "1" : "0");
@@ -98,7 +106,12 @@ public class ButtonSettingsFragment extends PreferenceFragment
             FileUtils.writeLine(node, (String) newValue);
             return true;
         }
-
+	if (Constants.GOVERNOR_KEY.equals(key)) {
+            Log.d("ConfigPanel",  "onPreferenceChange: " + newValue.toString());
+            mGOVERNOR.setValue((String) newValue);
+            FileUtils.setStringProp(Constants.GOVERNOR_SYSTEM_PROPERTY, (String) newValue);
+	    return true;
+	}
         return false;
     }
 

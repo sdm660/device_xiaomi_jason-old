@@ -100,6 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
     persist.radio.multisim.config=dsds \
     persist.radio.add_power_save=1 \
+    persist.governor.profile=0 \
     sys.autosuspend.timeout=500000
 
 # Haters gonna hate..
@@ -475,6 +476,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.performance.jason.rc \
+    init.governor.rc \
     ueventd.qcom.rc \
     fstab.qcom
 
