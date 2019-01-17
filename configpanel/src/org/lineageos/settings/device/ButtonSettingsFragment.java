@@ -37,6 +37,8 @@ public class ButtonSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener {
 
     private NotificationBrightnessPreference mNotificationBrightness;
+    private TorchYellowBrightnessPreference mYellowBrightness;
+    private TorchWhiteBrightnessPreference mWhiteBrightness;
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mKcalPref;
 
@@ -49,6 +51,16 @@ public class ButtonSettingsFragment extends PreferenceFragment
         mNotificationBrightness = (NotificationBrightnessPreference) findPreference("notification_key");
         if (mNotificationBrightness != null) {
             mNotificationBrightness.setEnabled(NotificationBrightnessPreference.isSupported());
+        }
+
+        mYellowBrightness = (TorchYellowBrightnessPreference) findPreference("torch_yellow_key");
+        if (mYellowBrightness != null) {
+            mYellowBrightness.setEnabled(TorchYellowBrightnessPreference.isSupported());
+        }
+
+        mWhiteBrightness = (TorchWhiteBrightnessPreference) findPreference("torch_white_key");
+        if (mWhiteBrightness != null) {
+            mWhiteBrightness.setEnabled(TorchWhiteBrightnessPreference.isSupported());
         }
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference("vibrator_key");
@@ -147,6 +159,10 @@ public class ButtonSettingsFragment extends PreferenceFragment
             ((VibratorStrengthPreference)preference).onDisplayPreferenceDialog(preference);
         } else if (preference instanceof NotificationBrightnessPreference){
             ((NotificationBrightnessPreference)preference).onDisplayPreferenceDialog(preference);
+        } else if (preference instanceof TorchYellowBrightnessPreference){
+            ((TorchYellowBrightnessPreference)preference).onDisplayPreferenceDialog(preference);
+        } else if (preference instanceof TorchWhiteBrightnessPreference){
+            ((TorchWhiteBrightnessPreference)preference).onDisplayPreferenceDialog(preference);
 	} else {
             super.onDisplayPreferenceDialog(preference);
         }

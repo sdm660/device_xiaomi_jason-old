@@ -51,4 +51,12 @@
     <string name="notification_title">Brightness</string>
     <string name="notification_summary">Define the brightness of the LED</string>
 
+    <!-- Torch LED -->
+    <string name="torch_category">Camera LED</string>
+    <string name="torch_yellow_title">Yellow brightness</string>
+    <string name="torch_yellow_summary">Define the brightness of the yellow LED</string>
+    <string name="torch_white_title">White brightness</string>
+    <string name="torch_white_summary">Define the brightness of the white LED</string>
+
+
 </resources>
