@@ -26,6 +26,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/torch_category">
+        <org.lineageos.settings.device.TorchYellowBrightnessPreference
+            android:key="torch_yellow_key"
+            android:iconSpaceReserved="true"
+            android:title="@string/torch_yellow_title"
+            android:summary="@string/torch_yellow_summary" />
+        <org.lineageos.settings.device.TorchWhiteBrightnessPreference
+            android:key="torch_white_key"
+            android:iconSpaceReserved="true"
+            android:title="@string/torch_white_title"
+            android:summary="@string/torch_white_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/notification_category">
         <org.lineageos.settings.device.NotificationBrightnessPreference
             android:key="notification_key"
