@@ -8,13 +8,13 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.zygote=stopped
-    stop fps_hal
+    stop vendor.fps_hal
 
 on property:init.svc.zygote=running
-    start fps_hal
+    start vendor.fps_hal
 
 on property:init.svc.zygote=restarting
-    stop fps_hal
+    stop vendor.fps_hal
 
 on init
     # Goodix fingerprint
