@@ -68,7 +68,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 97
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1401600
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay "19000 1401600:39000 1958400:99000"
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "85 1113600:26 1401600:90 1536000:14 2150400:98"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "85 1401600:90 1536000:14 2150400:98"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 18000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack 180000
