@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string-array name="governor_profiles">
-		<item>Gaming</item>
+		<item>Extreme Performance</item>
 		<item>Performance</item>
 		<item>Balance</item>
 		<item>Battery</item>
