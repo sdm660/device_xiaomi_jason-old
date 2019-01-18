@@ -59,8 +59,8 @@
     <string name="torch_white_summary">Define the brightness of the white LED</string>
 
   <!-- Governor Profiles -->
-    <string name="governor_profile_title">Performance</string>
-    <string name="governor_title">Performance Settings</string>
-    <string name="governor_summary">Choose your Performance settings</string>
-    <string name="governor_dialogTitle">Choose your Performance settings</string>
+    <string name="governor_profile_title">Governor tuner</string>
+    <string name="governor_title">CPU Governor Settings</string>
+    <string name="governor_summary">Choose your CPU governor settings</string>
+    <string name="governor_dialogTitle">Choose your CPU governor settings</string>
 </resources>
