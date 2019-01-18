@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string-array name="governor_profiles">
-		<item>Balance</item>
-		<item>Performance</item>
-		<item>Battery</item>
 		<item>Gaming</item>
+		<item>Performance</item>
+		<item>Balance</item>
+		<item>Battery</item>
 	</string-array>
 	<string-array name="governor_values">
 		<item>0</item>

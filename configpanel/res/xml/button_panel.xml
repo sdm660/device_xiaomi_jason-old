@@ -76,7 +76,7 @@
 			android:title="@string/governor_title"
                         android:iconSpaceReserved="true"
 			android:summary="@string/governor_summary"
-			android:defaultValue="0"
+			android:defaultValue="2"
 			android:entries="@array/governor_profiles"
 			android:entryValues="@array/governor_values"
 			android:dialogTitle="@string/governor_dialogTitle" />
