@@ -876,29 +876,6 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ssgqmigd /vendor/bin/ssgqmigd
-    class late_start
-    user radio
-    group radio gps system
-    socket ssgqmig seqpacket 0660 radio inet
-
-service ssgtzd /vendor/bin/ssgtzd
-    class late_start
-    user system
-    group system
-    socket ssgtzd stream 0660 system inet
-
-service mlid /vendor/bin/mlid
-    class late_start
-    user gps
-    group gps
-    socket mlid stream 0666 gps gps
-
-service vendor.qdmastatsd /system/vendor/bin/qdmastatsd
-    class late_start
-    user system
-    group readproc system net_bw_stats radio vendor_rfs_shared
-
 service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
@@ -928,11 +905,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
 
 service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class core
-    user root
-    oneshot
-
-service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-    class late_start
     user root
     oneshot
 
@@ -968,11 +940,6 @@ on property:sys.boot_completed=1
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-service qvop-daemon /vendor/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -1140,11 +1107,6 @@ service vendor.LKCore-rel /vendor/bin/LKCore
     user system
     group system log diag
 
-service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
-    class late_start
-    user system
-    group system
-
 on charger
     setprop persist.sys.usb.config mass_storage
     load_system_props
@@ -1180,11 +1142,6 @@ on property:vendor.rild.libpath=*
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
 
-service seemp_healthd /vendor/bin/seemp_healthd
-    class late_start
-    user system
-    group system
-
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
@@ -1204,13 +1161,6 @@ service vendor.hbtp /vendor/bin/hbtp_daemon
      group system
      capabilities SYS_NICE
      disabled
-
-service chre /vendor/bin/chre
-    class late_start
-    user system
-    group system
-    socket chre seqpacket 0660 root system
-    shutdown critical
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
