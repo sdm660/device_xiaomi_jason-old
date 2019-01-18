@@ -5,11 +5,13 @@
 		<item>Performance</item>
 		<item>Balance</item>
 		<item>Battery</item>
+                <item>Extreme Battery</item>
 	</string-array>
 	<string-array name="governor_values">
 		<item>0</item>
 		<item>1</item>
 		<item>2</item>
 		<item>3</item>
+                <item>4</item>
 	</string-array>
 </resources>
