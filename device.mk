@@ -620,3 +620,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.vendor.shutdown.waittime=500
+
+# Dirty ratios
+PRODUCT_PROPERTY_OVERRIDES += \
+    vm.dirty_ratio=5 \
+    vm.dirty_background_ratio=1
