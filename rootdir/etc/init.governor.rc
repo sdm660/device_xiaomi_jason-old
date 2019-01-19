@@ -24,6 +24,9 @@ write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1113600
 
+write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 160000000
+write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 647000000
+
 # Performance
 on property:persist.governor.profile=1
 
@@ -46,6 +49,9 @@ write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "80 1401600:
 write /sys/module/cpu_input_boost/parameters/input_boost_duration 128
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1401600
+
+write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 266000000
+write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 647000000
 
 # Battery
 on property:persist.governor.profile=3
@@ -70,6 +76,9 @@ write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1113600
 
+write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 160000000
+write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 588000000
+
 # Extreme Performance
 on property:persist.governor.profile=0
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
@@ -91,6 +100,9 @@ write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "75 1401600:
 write /sys/module/cpu_input_boost/parameters/input_boost_duration 128
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 1401600
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1401600
+
+write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 370000000
+write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 647000000
 
 # Extreme Battery
 on property:persist.governor.profile=4
@@ -114,3 +126,6 @@ write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "85 1401600:
 write /sys/module/cpu_input_boost/parameters/input_boost_duration 0
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 633600
 write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1113600
+
+write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 160000000
+write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 465000000
