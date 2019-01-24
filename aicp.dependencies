@@ -1,0 +1,27 @@
+[
+  {
+    "remote": "github",
+    "repository": "sdm660/android_kernel_xiaomi_jason",
+    "target_path": "kernel/xiaomi/jason",
+    "branch": "kernel.lnx.4.4.r34-rel"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "lineage-16.0"
+  },
+  {
+    "remote": "github",
+    "repository": "sdm660/vendor_xiaomi_jason",
+    "target_path": "vendor/xiaomi/jason",
+    "branch": "pie"
+  }
+]
+
+
+
+
+
+
+
