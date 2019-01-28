@@ -904,9 +904,9 @@ vendor/etc/thermal-engine-sdm660-high.conf
 vendor/etc/thermal-engine-sdm660-map.conf
 vendor/etc/thermal-engine-sdm660-nolimits.conf
 
-# Time services - from nitrogen - PKQ1.181007.001
+# Time services - from platina - PKQ1.181007.001
 -vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
-vendor/bin/time_daemon|f7237151ee490c1775dbf0a8729589662c8190b4
+vendor/bin/time_daemon|9fd464e3f356fcd4f4db6a4c9a1383d8210cb67b
 vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
 
 # Wifi - from nitrogen - PKQ1.181007.001
