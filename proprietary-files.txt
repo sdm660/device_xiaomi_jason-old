@@ -68,13 +68,12 @@ vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/bin/wcnss_filter
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+# Bluetooth - from platina - PKQ1.181007.001
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|78d7865306218acb360ccc0006d1a12a6630d50d
+vendor/bin/wcnss_filter|e613f77b4995a75edb517ce0ab1e84fdb4eeec34
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|31008c63657aba1bdee100d0e8925fc01639e496
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|5109e35356599b2d9b59c201c4d4fca5a7fbe81d
+vendor/lib64/libbtnv.so|a8185b73fa854af91fa9500d2082badd66d99f63
 
 # Bluetooth - aptX - from B2N_sprout PPR1.180610.011
 vendor/lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
