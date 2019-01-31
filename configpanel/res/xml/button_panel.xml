@@ -29,12 +29,10 @@
         android:title="@string/torch_category">
         <org.lineageos.settings.device.TorchYellowBrightnessPreference
             android:key="torch_yellow_key"
-            android:iconSpaceReserved="true"
             android:title="@string/torch_yellow_title"
             android:summary="@string/torch_yellow_summary" />
         <org.lineageos.settings.device.TorchWhiteBrightnessPreference
             android:key="torch_white_key"
-            android:iconSpaceReserved="true"
             android:title="@string/torch_white_title"
             android:summary="@string/torch_white_summary" />
     </PreferenceCategory>
@@ -43,7 +41,6 @@
         android:title="@string/notification_category">
         <org.lineageos.settings.device.NotificationBrightnessPreference
             android:key="notification_key"
-            android:iconSpaceReserved="true"
             android:title="@string/notification_title"
             android:summary="@string/notification_summary" />
     </PreferenceCategory>
@@ -53,7 +50,6 @@
         <org.lineageos.settings.device.VibratorStrengthPreference
             android:key="vibrator_key"
             android:title="@string/vibrator_title"
-            android:iconSpaceReserved="true"
             android:summary="@string/vibrator_summary" />
     </PreferenceCategory>
 
@@ -62,7 +58,6 @@
      <PreferenceScreen
             android:key="kcal"
             android:fragment="org.lineageos.settings.device.DisplayCalibration"
-            android:iconSpaceReserved="true"
             android:summary="@string/kcal_summary"
             android:title="@string/kcal_title" />
      </PreferenceCategory>
@@ -74,7 +69,6 @@
 		<ListPreference
 			android:key="governor"
 			android:title="@string/governor_title"
-                        android:iconSpaceReserved="true"
 			android:summary="@string/governor_summary"
 			android:defaultValue="2"
 			android:entries="@array/governor_profiles"
