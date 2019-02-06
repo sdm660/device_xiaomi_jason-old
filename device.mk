@@ -234,7 +234,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.fovc.enable=1 \
     persist.dualcam.lpm.enable=1 \
     persist.dualcam.defer.enable=1 \
-    camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
+    vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/MiuiCamera/etc/jason.xml:system/etc/device_features/jason.xml \
