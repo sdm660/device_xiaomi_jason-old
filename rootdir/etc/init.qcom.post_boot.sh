@@ -2356,10 +2356,6 @@ case "$target" in
             echo 1 > /proc/sys/kernel/sched_restrict_cluster_spill
             echo 50000 > /proc/sys/kernel/sched_short_burst_ns
 
-            # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
-
             # disable thermal bcl hotplug to switch governor
             echo 0 > /sys/module/msm_thermal/core_control/enabled
             for mode in /sys/devices/soc.0/qcom,bcl.*/mode
