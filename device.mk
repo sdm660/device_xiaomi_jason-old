@@ -218,7 +218,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    MiuiCamera \
+    Snap \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.sdm660 \
@@ -241,10 +241,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dualcam.lpm.enable=1 \
     persist.vendor.dualcam.defer.enable=1
     vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/MiuiCamera/etc/jason.xml:system/etc/device_features/jason.xml \
-    $(LOCAL_PATH)/MiuiCamera/etc/miuicamera-permissions.xml:system/etc/default-permissions/miuicamera-permissions.xml
 
 # Lawnchair
 PRODUCT_PROPERTY_OVERRIDES += \
