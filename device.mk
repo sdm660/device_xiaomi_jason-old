@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -108,6 +108,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Alipay
 PRODUCT_PACKAGES += \
+    IFAAService \
     org.ifaa.android.manager
 
 PRODUCT_BOOT_JARS += \
@@ -239,8 +240,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.fovc.enable=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
-    vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
+    persist.vendor.dualcam.defer.enable=1 \
+    vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android \
+    vendor.camera.aux.packageblacklist=com.tencent.mm
+
 
 # Lawnchair
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -370,9 +373,15 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.sdm660
 
-# LiveDisplay native
+# Lineage hardware
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+    vendor.lineage.touch@1.0-service.jason \
+    vendor.lineage.trust@1.0-service
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Launcher
 PRODUCT_PACKAGES += \
