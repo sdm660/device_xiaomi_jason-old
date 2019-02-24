@@ -71,8 +71,7 @@ on post-fs-data
     mkdir /data/thermal/config 0771 system system
 
 on boot
-    start rmt_storage
-    start rfs_access
+    start vendor.rmt_storage
     ####Regionalization config and prop files####
     chmod 0644 /persist/speccfg/spec
     chmod 0644 /persist/speccfg/devicetype
