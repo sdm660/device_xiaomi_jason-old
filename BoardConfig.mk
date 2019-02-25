@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -189,6 +189,9 @@ USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineage Hardware
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # Mainfest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
