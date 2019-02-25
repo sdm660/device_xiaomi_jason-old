@@ -373,9 +373,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.sdm660
 
-# LiveDisplay
+# LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+    vendor.lineage.livedisplay@1.0-service-sdm
 
 # Launcher
 PRODUCT_PACKAGES += \
