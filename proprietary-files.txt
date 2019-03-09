@@ -667,9 +667,11 @@ vendor/lib64/libmlipay.so
 vendor/bin/nqnfcinfo|8385ebbb0a283373f06e601382654a86ed5ddc2c
 vendor/firmware/libpn553_fw.so:vendor/lib/libpn553_fw.so
 
+# IRQ balance - from nitrogen - PKQ1.181007.001
+vendor/bin/msm_irqbalance|117d7c8a8f6f12b3615ec8ab676231df93d277f1
+
 # Perf - from nitrogen - PKQ1.181007.001
 vendor/bin/energy-awareness|c1ad0ec1e4171b59f166e580ef8ce7395ccb41a5
-vendor/bin/msm_irqbalance|117d7c8a8f6f12b3615ec8ab676231df93d277f1
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|16759e5de2c3f1b83585842f2616be9b204971a7
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
 vendor/etc/perf/commonresourceconfigs.xml|73fc37a6fa498a98758b5a91ebacb87ef0ffdcdf
