@@ -168,6 +168,17 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/decay_rate 100
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/down_thres 80
 
+    #Set mincpubw devfreq governor
+    write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
+
+    # Enable memlat governor
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,memlat-cpu0/mem_latency/ratio_ceil 400
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,memlat-cpu4/mem_latency/ratio_ceil 400
+
     # Disable sched boost
     write /proc/sys/kernel/sched_boost 0
     chmod 0444 /proc/sys/kernel/sched_boost
