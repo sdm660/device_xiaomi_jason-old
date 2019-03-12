@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Category title -->
+    <string name="graphics_title">Grafica</string>
+    <string name="buttons_title">Pulsanti fisici</string>
+
+    <!-- Application title -->
+    <string name="device_settings_app_name">Pulsanti aggiuntivi</string>
+    <string name="summary_device_settings">Funzioni specifiche per il tuo dispositivo</string>
+
+    <!-- Button settings -->
+    <string name="button_panel_title">Pulsanti aggiuntivi</string>
+    <string name="additional_buttons_title">Pulsanti aggiuntivi</string>
+
+    <!-- Vibrator -->
+    <string name="vibrator_category">Vibrazione</string>
+    <string name="vibrator_title">Intensità</string>
+    <string name="vibrator_summary">"Imposta l'intensità della vibrazione"</string>
+
+     <!-- Kcal -->
+    <string name="kcal_title">Colori display</string>
+    <string name="kcal_summary">Calibrazione dei colori display tramite KCAL</string>
+    <string name="kcal_enabled_title">Attiva KCAL</string>
+    <string name="kcal_enabled_summary">Attiva la calibrazione del display tramite KCAL</string>
+    <string name="kcal_red">Rosso</string>
+    <string name="kcal_green">Verde</string>
+    <string name="kcal_blue">Blu</string>
+    <string name="kcal_saturation">Saturazione</string>
+    <string name="kcal_contrast">Contrasto</string>
+    <string name="menu_reset">Ripristina</string>
+
+    <!-- Notification LED -->
+    <string name="notification_category">LED di notifica</string>
+    <string name="notification_title">Luminosità</string>
+    <string name="notification_summary">Imposta la luminosità del LED</string>
+
+    <!-- Torch LED -->
+    <string name="torch_category">LED della fotocamera</string>
+    <string name="torch_yellow_title">Luminosità gialla</string>
+    <string name="torch_yellow_summary">Imposta la luminosità del LED giallo</string>
+    <string name="torch_white_title">Luminosità bianca</string>
+    <string name="torch_white_summary">Imposta la luminosità del LED bianco</string>
+
+  <!-- Governor Profiles -->
+    <string name="governor_profile_title">Regola le prestazioni</string>
+    <string name="governor_title">Impostazioni boost</string>
+    <string name="governor_summary">Scegli il tuo profilo boost</string>
+    <string name="governor_dialogTitle">Scegli il tuo profilo boost</string>
+</resources>
