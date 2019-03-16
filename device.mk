@@ -595,6 +595,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.hwui.renderer=opengl \
     debug.egl.hw=1 \
+    debug.cpurend.vsync=false \
     debug.sf.disable_hwc=0 \
     debug.sf.recomputecrop=0 \
     debug.sf.disable_backpressure=1 \
