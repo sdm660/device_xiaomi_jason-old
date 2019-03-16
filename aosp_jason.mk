@@ -24,6 +24,10 @@ $(call inherit-product, device/xiaomi/jason/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
+WITH_GAPPS := true
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
+
 EXTENDED_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 KBUILD_BUILD_USER := sastimenes
