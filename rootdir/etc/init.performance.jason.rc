@@ -58,11 +58,6 @@ on init
     # Setup swap
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
-    write /sys/block/zram0/use_dedup 1
-    write /sys/module/zswap/parameters/compressor lz4
-    write /sys/module/zswap/parameters/zpool z3fold
-    write /sys/module/zswap/parameters/max_pool_percent 35
-    write /sys/module/zswap/parameters/enabled 1
 
     # Notification LED control default value
     write /sys/class/leds/white/max_brightness 64
