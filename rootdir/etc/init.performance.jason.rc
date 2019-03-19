@@ -103,9 +103,6 @@ on property:sys.boot_completed=1
     # stock value is 512k
     setprop dalvik.vm.heapminfree 2m
 
-    # Disable thermal core control until CPU is configured
-    write /sys/module/msm_thermal/core_control/enabled 0
-
     # Setup post-boot cpusets
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-3,6-7
@@ -132,19 +129,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/iowait_boost_enable 1
-
-    # bring all cores online
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/devices/system/cpu/cpu4/online 1
-    write /sys/devices/system/cpu/cpu5/online 1
-    write /sys/devices/system/cpu/cpu6/online 1
-    write /sys/devices/system/cpu/cpu7/online 1
-
-    # CPU is configured, re-enable thermal core control
-    write /sys/module/msm_thermal/core_control/enabled 1
 
     # Enable bus-dcvs
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
