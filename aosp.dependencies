@@ -3,7 +3,13 @@
     "remote": "github",
     "repository": "sdm660/android_kernel_xiaomi_jason",
     "target_path": "kernel/xiaomi/jason",
-    "branch": "kernel.lnx.4.4.r34-rel"
+    "branch": "pie-new"
+  },
+  {
+    "remote": "github",
+    "repository": "sdm660/prebuilts_dragontc",
+    "target_path": "prebuilts/clang/host/linux-x86/dragontc",
+    "branch": "9.0"
   },
   {
     "remote": "github",
@@ -18,10 +24,3 @@
     "branch": "pie"
   }
 ]
-
-
-
-
-
-
-
