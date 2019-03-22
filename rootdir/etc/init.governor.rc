@@ -3,29 +3,24 @@
 # Medium
 on property:persist.governor.profile=2
 
-write /sys/module/cpu_input_boost/parameters/general_stune_boost 15
 write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 20
 
 # High
 on property:persist.governor.profile=1
 
-write /sys/module/cpu_input_boost/parameters/general_stune_boost 25
-write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 35
+write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 30
 
 # Low
 on property:persist.governor.profile=3
 
-write /sys/module/cpu_input_boost/parameters/general_stune_boost 10
 write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 15
 
 # Very High
 on property:persist.governor.profile=0
 
-write /sys/module/cpu_input_boost/parameters/general_stune_boost 30
 write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 50
 
 # Very Low
 on property:persist.governor.profile=4
 
-write /sys/module/cpu_input_boost/parameters/general_stune_boost 10
 write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 10
