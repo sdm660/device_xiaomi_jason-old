@@ -37,8 +37,8 @@
       "Name": "CPUBWMinFreq",
       "Path": "/sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq",
       "Values": [
-        "3143",
-        "1525",
+        "2929",
+        "1571",
         "762"
       ],
       "ResetOnInit": true
