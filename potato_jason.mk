@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from jason device
 $(call inherit-product, device/xiaomi/jason/device.mk)
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Inherit some common POSP stuff.
 $(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
