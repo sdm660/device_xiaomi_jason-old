@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/jason/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 PRODUCT_NAME := lineage_jason
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := jason
