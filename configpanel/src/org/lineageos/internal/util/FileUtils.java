@@ -16,7 +16,6 @@
 
 package org.lineageos.internal.util;
 
-import android.os.SystemProperties;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -122,13 +121,5 @@ public final class FileUtils {
     public static boolean isFileWritable(String fileName) {
         final File file = new File(fileName);
         return file.exists() && file.canWrite();
-    }
-
-    public static void  setStringProp(String prop, String value) {
-            SystemProperties.set(prop, value);
-    }
-
-    public static String getStringProp(String prop, String defaultValue) {
-        return SystemProperties.get(prop, defaultValue);
     }
 }

@@ -28,10 +28,6 @@ public class Constants {
     // Nodes
     public static final String BUTTON_SWAP_NODE = "/sys/bus/i2c/devices/4-0020/input/input1/reversed_keys";
 
-    // Governor profiles
-    public static final String GOVERNOR_KEY = "governor";
-    public static final String GOVERNOR_SYSTEM_PROPERTY = "persist.governor.profile";
-
     // Intents
     public static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";
 

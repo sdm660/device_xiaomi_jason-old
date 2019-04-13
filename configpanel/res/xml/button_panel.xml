@@ -62,19 +62,4 @@
             android:title="@string/kcal_title" />
      </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="governor_profile"
-        android:title="@string/governor_profile_title" >
-
-		<ListPreference
-			android:key="governor"
-			android:title="@string/governor_title"
-			android:summary="@string/governor_summary"
-			android:defaultValue="2"
-			android:entries="@array/governor_profiles"
-			android:entryValues="@array/governor_values"
-			android:dialogTitle="@string/governor_dialogTitle" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
