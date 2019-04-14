@@ -241,10 +241,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packageblacklist=com.tencent.mm
 
 
-# Lawnchair
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.vendor.overlay.theme=com.overlay.lawnconf
-
 # ConfigPanel
 PRODUCT_PACKAGES += \
     ConfigPanel \
@@ -376,15 +372,6 @@ PRODUCT_PACKAGES += \
 # LiveDisplay native
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@1.0-service-sdm
-
-# Launcher
-PRODUCT_PACKAGES += \
-    Lawnchair \
-    LawnConf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/launcher/Lawnchair/etc/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
-    $(LOCAL_PATH)/launcher/Lawnchair/etc/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Media
 PRODUCT_COPY_FILES += \
