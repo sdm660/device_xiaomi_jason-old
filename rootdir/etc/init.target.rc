@@ -370,12 +370,6 @@ service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
 #   class core
 #   oneshot
 
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user system
-    group system
-    oneshot
-
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
 
