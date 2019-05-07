@@ -40,6 +40,11 @@ on init
     write /dev/cpuset/application/background/mems 0
     chown system system /dev/cpuset/application/background/tasks
     chmod 0660 /dev/cpuset/application/background/tasks
+    mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
+    write /dev/cpuset/camera-daemon/cpus 0
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
 
     # boot time fs tune
     write /sys/block/mmcblk0/queue/scheduler cfq
