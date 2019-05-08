@@ -1,3 +1,14 @@
+on early-init
+    # mount schedtune and blkio together in "on early-init",
+    # so that mount schedtune in init.rc will fail
+    mkdir /dev/stune
+    mount cgroup none /dev/stune nodev noexec nosuid schedtune,blkio
+
+    mkdir /dev/stune/foreground
+    mkdir /dev/stune/background
+    mkdir /dev/stune/top-app
+    mkdir /dev/stune/rt
+
 on init
     # Setup schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
