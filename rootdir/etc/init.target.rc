@@ -162,9 +162,6 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
 
-on property:sys.boot_completed=1
-    setprop sys.io.scheduler "bfq"
-
 #start camera server as daemon
 #service qcamerasvr /system/bin/mm-qcamera-daemon
 #    class late_start
