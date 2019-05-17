@@ -213,8 +213,8 @@ on property:sys.boot_completed=1
     write /dev/stune/rt/blkio.weight 1000
 
     # Setup dirty ratios
-    write /proc/sys/vm/dirty_ratio 5
-    write /proc/sys/vm/dirty_background_ratio 1
+    write /proc/sys/vm/dirty_ratio 25
+    write /proc/sys/vm/dirty_background_ratio 10
 
     # Lower vfs_cache_pressure
     write /proc/sys/vm/vfs_cache_pressure 100
