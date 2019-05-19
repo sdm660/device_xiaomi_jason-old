@@ -217,8 +217,8 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_ratio 25
     write /proc/sys/vm/dirty_background_ratio 10
 
-    # Lower vfs_cache_pressure
-    write /proc/sys/vm/vfs_cache_pressure 100
+    # VFS cache pressure
+    write /proc/sys/vm/vfs_cache_pressure 40
 
     setprop net.hostname xiaomi-jason
 
