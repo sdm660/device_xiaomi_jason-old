@@ -15,58 +15,6 @@ on init
     write /dev/stune/top-app/schedtune.boost 0
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
-    # Setup all cpusets
-    mkdir /dev/cpuset/kernel 0750 root system
-    write /dev/cpuset/kernel/cpus 0
-    write /dev/cpuset/kernel/mems 0
-    chown system system /dev/cpuset/kernel/tasks
-    chmod 0660 /dev/cpuset/kernel/tasks
-    mkdir /dev/cpuset/system 0750 root system
-    write /dev/cpuset/system/cpus 0
-    write /dev/cpuset/system/mems 0
-    chown system system /dev/cpuset/system/tasks
-    chmod 0660 /dev/cpuset/system/tasks
-    mkdir /dev/cpuset/system/performance 0750 root system
-    write /dev/cpuset/system/performance/cpus 0
-    write /dev/cpuset/system/performance/mems 0
-    chown system system /dev/cpuset/system/performance/tasks
-    chmod 0660 /dev/cpuset/system/performance/tasks
-    mkdir /dev/cpuset/system/background 0750 root system
-    write /dev/cpuset/system/background/cpus 0
-    write /dev/cpuset/system/background/mems 0
-    chown system system /dev/cpuset/system/background/tasks
-    chmod 0660 /dev/cpuset/system/background/tasks
-    mkdir /dev/cpuset/application 0750 root system
-    write /dev/cpuset/application/cpus 0
-    write /dev/cpuset/application/mems 0
-    chown system system /dev/cpuset/application/tasks
-    chmod 0660 /dev/cpuset/application/tasks
-    mkdir /dev/cpuset/application/performance 0750 root system
-    write /dev/cpuset/application/performance/cpus 0
-    write /dev/cpuset/application/performance/mems 0
-    chown system system /dev/cpuset/application/performance/tasks
-    chmod 0660 /dev/cpuset/application/performance/tasks
-    mkdir /dev/cpuset/application/background 0750 root system
-    write /dev/cpuset/application/background/cpus 0
-    write /dev/cpuset/application/background/mems 0
-    chown system system /dev/cpuset/application/background/tasks
-    chmod 0660 /dev/cpuset/application/background/tasks
-    mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
-    write /dev/cpuset/camera-daemon/cpus 0
-    write /dev/cpuset/camera-daemon/mems 0
-    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
-    chmod 0660 /dev/cpuset/camera-daemon/tasks
-
-    # boot time fs tune
-    write /sys/block/mmcblk0/queue/scheduler cfq
-    write /sys/block/mmcblk0/queue/iostats 0
-    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
-    write /sys/block/mmcblk0/queue/nr_requests 256
-    write /sys/block/mmcblk0rpmb/queue/scheduler cfq
-    write /sys/block/mmcblk0rpmb/queue/iostats 0
-    write /sys/block/mmcblk0rpmb/queue/read_ahead_kb 2048
-    write /sys/block/mmcblk0rpmb/queue/nr_requests 256
-
     # Write initial values
     write /dev/stune/blkio.group_idle 0
     write /dev/stune/foreground/blkio.group_idle 0
@@ -109,22 +57,6 @@ on post-fs
     chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
-on boot
-    #Set on boot cpusets
-    write /dev/cpuset/top-app/cpus 0-3,4-7
-    write /dev/cpuset/foreground/cpus 0-3,4-7
-    write /dev/cpuset/background/cpus 0-7
-    write /dev/cpuset/system-background/cpus 0-7
-    write /dev/cpuset/kernel/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/system/performance/cpus 0-7
-    write /dev/cpuset/system/background/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
-    write /dev/cpuset/application/performance/cpus 0-7
-    write /dev/cpuset/application/background/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
-
 on property:sys.boot_completed=1
     # Set the default IRQ affinity to the silver cluster.
     write /proc/irq/default_smp_affinity f
@@ -140,14 +72,6 @@ on property:sys.boot_completed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/restricted/cpus 0-3
-    write /dev/cpuset/kernel/cpus 2,3
-    write /dev/cpuset/system/performance/cpus 6-7
-    write /dev/cpuset/system/background/cpus 0-1
-    write /dev/cpuset/system/cpus 0-1,6-7
-    write /dev/cpuset/application/performance/cpus 4-5
-    write /dev/cpuset/application/background/cpus 0-1
-    write /dev/cpuset/application/cpus 0-1,4-5
-    write /dev/cpuset/audio-app/cpus 1-2
 
     # Setup CPU governor
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
@@ -186,17 +110,6 @@ on property:sys.boot_completed=1
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
-
-    # end boot time fs tune
-    write /sys/block/mmcblk0/queue/scheduler cfq
-    write /sys/block/mmcblk0/queue/iostats 0
-    write /sys/block/mmcblk0/queue/read_ahead_kb 128
-    write /sys/block/mmcblk0/queue/nr_requests 128
-
-    write /sys/block/mmcblk0rpmb/queue/scheduler cfq
-    write /sys/block/mmcblk0rpmb/queue/iostats 0
-    write /sys/block/mmcblk0rpmb/queue/read_ahead_kb 128
-    write /sys/block/mmcblk0rpmb/queue/nr_requests 128
 
     setprop sys.io.scheduler "cfq"
 
