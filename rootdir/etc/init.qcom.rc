@@ -32,6 +32,13 @@ import /vendor/etc/init/hw/init.qcom.factory.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.performance.jason.rc
 
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
@@ -267,6 +274,10 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+    
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used for dump collection
@@ -939,6 +950,9 @@ service wifi-crda /vendor/bin/init.crda.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
     start qti-testscripts
+
+    # Stop the logger service
+    stop logger
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
