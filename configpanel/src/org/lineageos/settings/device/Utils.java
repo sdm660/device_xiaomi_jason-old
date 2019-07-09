@@ -25,8 +25,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import android.content.SharedPreferences;
 import android.os.UserHandle;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.PreferenceManager;
+import androidx.preference.SwitchPreference;
+import androidx.preference.PreferenceManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
