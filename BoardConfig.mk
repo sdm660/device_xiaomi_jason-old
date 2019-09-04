@@ -64,9 +64,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
 TARGET_KERNEL_CONFIG := lineageos_jason_defconfig
 TARGET_KERNEL_VERSION := 4.4
 
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
