@@ -547,6 +547,11 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
+# Treble
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_VENDOR_MOVE_ENABLED := true
+
 # USB
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-service

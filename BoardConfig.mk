@@ -260,9 +260,6 @@ BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/sde43\"
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION := current
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_VENDOR_MOVE_ENABLED := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Security patch level
