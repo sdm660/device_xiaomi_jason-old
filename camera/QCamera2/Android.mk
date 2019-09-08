@@ -43,6 +43,7 @@ LOCAL_SRC_FILES += \
 LOCAL_CFLAGS := -Wall -Wextra -Werror
 LOCAL_CFLAGS += -DFDLEAK_FLAG
 LOCAL_CFLAGS += -DMEMLEAK_FLAG
+LOCAL_CFLAGS += -Wno-implicit-fallthrough
 #HAL 1.0 source
 
 ifeq ($(TARGET_SUPPORT_HAL1),false)
