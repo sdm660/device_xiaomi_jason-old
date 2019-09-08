@@ -441,7 +441,7 @@ vendor/etc/qdcm_calib_data_sharp_fhd_cmd_incell_dsi_panel.xml
 vendor/etc/sdr_config.cfg
 
 # DPM - from LA.UM.7.2.r1-06900-sdm660.0
-bin/dpmd|800f2319955ded8213da63085bca7c9a6947538e
+#bin/dpmd|800f2319955ded8213da63085bca7c9a6947538e
 etc/dpm/dpm.conf|fec89edb6cff81424a6c3a730fed92efa3613f72
 etc/init/dpmd.rc|52ca6ad920a1804e4ff608113cece063730f5e0c
 etc/permissions/com.qti.dpmframework.xml|36b94c9338069e434b83359a92cdc7ff62b822df
@@ -454,8 +454,8 @@ lib64/libdpmctmgr.so|611642251e77a1ce8a4bc59beaf4213bfc0cef8a
 lib64/libdpmfdmgr.so|84a6916dff3b3608e9ac83106df651ba995ca704
 lib64/libdpmframework.so|060a7200afccf7411969af4943908c92d752c032
 lib64/libdpmtcm.so|db125f21d6f9da6afcb8956ba2eabae58cbeb30e
--priv-app/dpmserviceapp/dpmserviceapp.apk|8f153185721c3383f8f5858aee3b0bb73220526c
-vendor/bin/dpmQmiMgr|0808c5a2d7b51611b3f976beb9552aabda796a41
+#-priv-app/dpmserviceapp/dpmserviceapp.apk|8f153185721c3383f8f5858aee3b0bb73220526c
+#vendor/bin/dpmQmiMgr|0808c5a2d7b51611b3f976beb9552aabda796a41
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|7738cc1fdf4ce250285ed8c4130735d6cd0c598e
 vendor/lib64/libdpmqmihal.so|5d4647ac2ad8d386a44f5e9c5486287b21a7f758
 
