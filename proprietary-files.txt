@@ -514,7 +514,7 @@ lib64/vendor.qti.gnss@1.1.so|18402dc7743207e5c896088de25e1740ac4dc90d
 lib64/vendor.qti.gnss@1.2.so|e67548d5dbb3d7b9fd02007e3fb9392f5b824657
 lib64/vendor.qti.gnss@2.0.so|03f3ccbe561ae8b56a7ceecd67c3877eb4e6f622
 lib64/vendor.qti.gnss@2.1.so|a76e8d8700c8f55b805b64ad89835cdb83108d4e
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|1667af1e78e8dbf4aea9cfc45e1aeb7e71dbe67d
+#-priv-app/com.qualcomm.location/com.qualcomm.location.apk|1667af1e78e8dbf4aea9cfc45e1aeb7e71dbe67d
 vendor/bin/hw/vendor.qti.gnss@2.0-service|7f92f169ef8fac413d517636bf9844c5abb6a044
 vendor/bin/loc_launcher|1705e75180e9bdf1ce7aa00bc9ce1d7c07e8fd74
 vendor/bin/lowi-server|fabc723b1a53809a8619061227f6bb9453a2e297
